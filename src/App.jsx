@@ -1,78 +1,52 @@
 import React, { useState } from 'react';
-import ToDoList from './toDoList';
+import Header from './Header';
+import Footer from './Footer';
+import CreateNote from './createNote';
+import Note from './Note';
 
-function App(){
+const App = () => {
 
-    const[inputList,setinputList] = useState("");
-    const [ Items, setItems] = useState([]);
-    // setinputList("Buy" + inputList);
-    
-    const itemEvent= (event)=> {
-        setinputList(event.target.value);
+
+    const [addItem,setAddItem] =useState([]);
+
+    const addNote =(note) => {
+        // alert("I am Clicked")
+
+        setAddItem((prevData) => {
+            return  [...prevData, note]
+        });
+
+        // console.log(note);
+    };
+    const onDelete = (id) => {
+        setAddItem((oldData) => 
+            oldData.filter((currdata, indx) =>{
+                return indx !== id;
+            })
+        )
     }
 
-
-    // const onSubmits = (event) =>{
-    //     event.default();
-    //     return(
-
-    //         setinputList("Buy " + inputList )
-    //     )
+    return (<>
+        <Header />
         
-    //     // setinputList("Buy" + event.target.value )
-    //     // const val = event.target.value
-    // }
+        <CreateNote 
+        passNote = {addNote} />
+        
 
-    const listOfItems = () => {
-        setItems((oldItems) => {
-            return[...oldItems, inputList];
-        })
-        setinputList ("");
-    }
+        {addItem.map((val, index) => {
+            return (<Note 
+            key = {index}
+            id = {index}
+            title = {val.title}
+            content = {val.content}
+            deleteItem = {onDelete}
+            />)
+        })}
 
-    const deleteItem = (id) => {
-        // console.log('Clicked')
-        setItems((oldItems) => {
-            return(
-                oldItems.filter((arrElem, index) => {
-                    return index !== id;
-                })
-
-            )
-        })
-    }
-
-
-
-
-
-
-    return(
-    <>
-    <div className = "main_div">
-        <div className = "center_div">
-            <h1> To Do List </h1>
-            <input type= "text" placeholder = "Add an Item" onChange = {itemEvent}
-            value= {inputList} />
-            <button className= "add" onClick = {listOfItems}>+</button>
-
-            <ol>
-                {Items.map((itemval, index) => {
-                    return(
-                    <ToDoList 
-                        key = {index}
-                        id={index}
-                        text = {itemval}
-                        onSelect = {deleteItem}
-                    />
-
-                    )
-                })}
-            </ol>
-        </div>
-    </div>
+        <Footer />
     </>
+    );
 
-    )
-}
+};
+
 export default App;
