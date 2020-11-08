@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito+Sans:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
 
 body {
-  display: flex;
-  flex-direction: row;
   margin: 0;
-  height: auto;
   
-  
+  background: cornflowerblue;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -21,180 +22,121 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.head{
-  display: flex;
-  width: 100vw;
-  height: 12vh;
-  background: rgb(0, 221, 221);
-  color: blanchedalmond;
-  flex-direction: row;
-    
-}
 
-.logo{
-  display: flex;
-  margin: 0.9rem !important;
-  margin-left: 5rem !important;
-}
-.header{
-  display: flex;
-  height: auto;
-  width: auto;
-  margin: auto;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-}
-
-.main_note{
+.main_div{
   display: flex;
   width: 25%;
-  height: auto;
+  height: 85vh;
+  justify-content: center;
+  /* align-items: center; */
   margin: auto;
-  background: white;
-  box-shadow: 0 1rem 2rem rgb(8, 94, 94);
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-  margin-top: 1.5rem;
-  border-radius: 10px;
-  transition: 0.5s;
-  
-}
-
-.input_box{
-  display: flex;
-  width: 90%;
-  
-  margin: 10%;
-  margin-left: -10%;
-  border: none;
-  border-bottom: 2px solid  rgb(0, 173, 173);
-  color: rgb(8, 94, 94);
-  padding-bottom: 0.4rem;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: 'Lora', serif;
-  outline: none;
-  
-
-}
-.input_box::placeholder{
-  font-size: large;
-  color:  rgb(0, 173, 173);
-  font-weight: 100;
-  font-family: 'Lora', serif;
-}
-
-.textarea{
-  display: flex;
-  height: auto;
-  /* width: auto; */
-  
-  margin: 10%;
-  margin-left: -10%;
-  border: none;
-  border-bottom: 2px solid  rgb(0, 173, 173);
-  color: rgb(8, 94, 94);
-  padding-bottom: 0.2rem;
-  margin-bottom: 25%;
-  
-  font-size: 0.8rem;
-  font-family: 'Lora', serif;
-  outline: none;
-  
-}
-.textarea::placeholder{
-  
-  color:  rgb(0, 173, 173);
-  font-weight: 100;
-  font-family: 'Lora', serif;
-}
-
-.add_btn{
-  display: flex !important;
-  position: absolute !important;
-  height: 3rem !important;
-  width: 1rem !important;
-  font-size: 2rem !important;
-  font-weight: bolder !important;
-  background:  rgb(0, 173, 173) !important;
-  border-radius: 50% !important;
-  color: blanchedalmond !important;
-  right: 36% !important;
-  bottom: 52% !important;
-  box-shadow: 0 0.5rem 2rem rgb(8, 94, 94);
-}
-
-.add_btn:hover{
-  color: rgb(0, 228, 228)!important;
-  background: rgb(119, 118, 118) !important;
-  box-shadow: 0 0 1rem rgb(0, 173, 173),0 0 2rem rgb(0, 173, 173),inset 0 0 2rem #555 !important;
-  
-  /* font-weight: bold; */
-}
-
-.note{
-  display: inline-flex;
-  flex-direction: column;
-  width: 20%;
-  height: 18vh;
-  /* border: 1px solid black; */
+  margin-top: 3%;
+  background: linear-gradient(130deg, #fff , #000 );
+  border: 1px solid black;
+  box-shadow: 
+              0 0 3rem black;
   border-radius: 1rem;
-  box-shadow: 0 1rem 2rem rgb(8, 94, 94);
-  margin-left: 1.5rem;
-  margin-right: 1rem;
-  margin-top: 4rem;
-  background: rgb(161, 245, 245);
-  /* margin-bottom: 5rem; */
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-color: transparent;
 
 }
-.del_head{
+h1{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 5px ;
+  /* border-radius: 10px; */
+  width: 25vw;
+  color: white;
+  background: rgb(104, 5, 104);
+}
+input{
+  display: flex;
+  width: 60%;
+  height: 7%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  left: -30px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent;
+  outline-style: none;
+  border: none;
+  border-bottom: 3px solid rgb(104, 5, 104);
   font-size: larger;
-  font-weight: bold;
-  padding: 0.2rem;
-  margin-left: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.1rem;
-  color: rgb(8, 94, 94);
-}
-.del_para{
-  display: flex;
-  font-size: small;
-  font-weight: 400;
-  padding: 0.2rem;
-  margin-left: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.1rem;
-  color: rgb(8, 94, 94);
-}
-.del_btn{
-  display: inline-flex !important;
-  /* position: relative !important; */
-  height: 3rem !important;
-  width: 1rem !important;
-  background:  rgb(0, 173, 173) !important;
-  border-radius: 50% !important;
-  color: blanchedalmond !important;
+  color: rgb(104, 5, 104);
   
-  box-shadow: 0 0.5rem 2rem rgb(8, 94, 94) !important;
+  
+  
+}
+input::placeholder{
+  font-size: 1.2rem;
+  color:  rgba(58, 1, 58,0.5);
+  font-weight: bolder;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.add{
+  position: absolute;
+  top: 19%;
+  left: 57%;
+  /* height: 3em;*/
+  width: 1.4em; 
+  font-size: 2rem;
+  font-weight: bolder;
+  border-radius: 50%;
+  color: cyan;
+  background: rgb(104, 5, 104) ;
+  border: 2px solid cyan;
+  outline: none;
+  /* box-shadow: 0 0 2rem cyan; */
+  cursor: pointer;
+}
+.add:hover{
+  background: greenyellow;
+  color: green;
+  border: 2px solid greenyellow;
+  outline: none;
+  box-shadow: 0 0 2rem greenyellow;
 }
 
-
-
-.copyright{
+li{
   display: flex;
-  width: 100vw;
-  height: 4vh;
-  background:  rgb(0, 221, 221);
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-  color: blanchedalmond;
-  font-weight: 400;
-  word-spacing: 1rem;
-  position: fixed;
-  bottom: -15px;
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  font-family: 'Nunito Sans', sans-serif;
+  text-decoration: none;
+  left: 25%;
+  margin-top: 3%;
+  text-transform: capitalize;
+  color:  rgb(104, 5, 104);
 }
-
+.cross{
+  position: absolute;
+  top: 5%;
+  left: -15%;
+  /* height: 3em;*/
+  width: 1.4em; 
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 50%;
+  color: green;
+  background: rgb(255, 255, 255) ;
+  border: 2px solid green;
+  outline: none;
+  /* box-shadow: 0 0 2rem cyan; */
+  cursor: pointer;
+}
+.cross:hover {
+  background: red;
+  color: #000;
+  border: 2px solid #000;
+}
