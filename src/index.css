@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+
+body {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  height: auto;
+  
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.head{
+  display: flex;
+  width: 100vw;
+  height: 12vh;
+  background: rgb(0, 221, 221);
+  color: blanchedalmond;
+  flex-direction: row;
+    
+}
+
+.logo{
+  display: flex;
+  margin: 0.9rem !important;
+  margin-left: 5rem !important;
+}
+.header{
+  display: flex;
+  height: auto;
+  width: auto;
+  margin: auto;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.main_note{
+  display: flex;
+  width: 25%;
+  height: auto;
+  margin: auto;
+  background: white;
+  box-shadow: 0 1rem 2rem rgb(8, 94, 94);
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  transition: 0.5s;
+  
+}
+
+.input_box{
+  display: flex;
+  width: 90%;
+  
+  margin: 10%;
+  margin-left: -10%;
+  border: none;
+  border-bottom: 2px solid  rgb(0, 173, 173);
+  color: rgb(8, 94, 94);
+  padding-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  outline: none;
+  
+
+}
+.input_box::placeholder{
+  font-size: large;
+  color:  rgb(0, 173, 173);
+  font-weight: 100;
+  font-family: 'Lora', serif;
+}
+
+.textarea{
+  display: flex;
+  height: auto;
+  /* width: auto; */
+  
+  margin: 10%;
+  margin-left: -10%;
+  border: none;
+  border-bottom: 2px solid  rgb(0, 173, 173);
+  color: rgb(8, 94, 94);
+  padding-bottom: 0.2rem;
+  margin-bottom: 25%;
+  
+  font-size: 0.8rem;
+  font-family: 'Lora', serif;
+  outline: none;
+  
+}
+.textarea::placeholder{
+  
+  color:  rgb(0, 173, 173);
+  font-weight: 100;
+  font-family: 'Lora', serif;
+}
+
+.add_btn{
+  display: flex !important;
+  position: absolute !important;
+  height: 3rem !important;
+  width: 1rem !important;
+  font-size: 2rem !important;
+  font-weight: bolder !important;
+  background:  rgb(0, 173, 173) !important;
+  border-radius: 50% !important;
+  color: blanchedalmond !important;
+  right: 36% !important;
+  bottom: 52% !important;
+  box-shadow: 0 0.5rem 2rem rgb(8, 94, 94);
+}
+
+.add_btn:hover{
+  color: rgb(0, 228, 228)!important;
+  background: rgb(119, 118, 118) !important;
+  box-shadow: 0 0 1rem rgb(0, 173, 173),0 0 2rem rgb(0, 173, 173),inset 0 0 2rem #555 !important;
+  
+  /* font-weight: bold; */
+}
+
+.note{
+  display: inline-flex;
+  flex-direction: column;
+  width: 20%;
+  height: 18vh;
+  /* border: 1px solid black; */
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgb(8, 94, 94);
+  margin-left: 1.5rem;
+  margin-right: 1rem;
+  margin-top: 4rem;
+  background: rgb(161, 245, 245);
+  /* margin-bottom: 5rem; */
+
+}
+.del_head{
+  display: flex;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0.2rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  color: rgb(8, 94, 94);
+}
+.del_para{
+  display: flex;
+  font-size: small;
+  font-weight: 400;
+  padding: 0.2rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  color: rgb(8, 94, 94);
+}
+.del_btn{
+  display: inline-flex !important;
+  /* position: relative !important; */
+  height: 3rem !important;
+  width: 1rem !important;
+  background:  rgb(0, 173, 173) !important;
+  border-radius: 50% !important;
+  color: blanchedalmond !important;
+  
+  box-shadow: 0 0.5rem 2rem rgb(8, 94, 94) !important;
+}
+
+
+
+.copyright{
+  display: flex;
+  width: 100vw;
+  height: 4vh;
+  background:  rgb(0, 221, 221);
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  color: blanchedalmond;
+  font-weight: 400;
+  word-spacing: 1rem;
+  position: fixed;
+  bottom: -15px;
+}
+
